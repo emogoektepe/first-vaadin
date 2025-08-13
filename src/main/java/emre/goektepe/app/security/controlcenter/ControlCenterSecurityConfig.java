@@ -67,7 +67,7 @@ public class ControlCenterSecurityConfig extends IdentityManagementConfiguration
      * @see #mapOidcUser(OidcUserRequest, OidcUserInfo)
      */
     @Bean
-    OidcUserService oidcUserService() {
+    public OidcUserService customOidcUserService() {
         var userService = new OidcUserService();
         userService.setOidcUserMapper(ControlCenterSecurityConfig::mapOidcUser);
         return userService;
